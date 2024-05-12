@@ -1,0 +1,63 @@
+<section>
+    <div class="categories_menu">
+        <div class="categories_title">
+            <h2 class="categori_toggle">ALL CATEGORIES</h2>
+        </div>
+        <div class="categories_menu_toggle">
+            <ul>
+                <!--<li class="menu_item_children"><a href="#">Brake Parts <i class="fa fa-angle-right"></i></a>
+                    <ul class="categories_mega_menu column_3">
+                        <li class="menu_item_children"><a href="#">Dresses</a>
+                            <ul class="categorie_sub_menu">
+                                <li><a href="#">Sweater</a></li>
+                                <li><a href="#">Evening</a></li>
+                                <li><a href="#">Day</a></li>
+                                <li><a href="#">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_item_children"><a href="#">shoes</a>
+                            <ul class="categorie_sub_menu">
+                                <li><a href="#">Ankle Boots</a></li>
+                                <li><a href="#">Clog sandals </a></li>
+                                <li><a href="#">run</a></li>
+                                <li><a href="#">Books</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_item_children"><a href="#">Clothing</a>
+                            <ul class="categorie_sub_menu">
+                                <li><a href="#">Coats Jackets </a></li>
+                                <li><a href="#">Raincoats</a></li>
+                                <li><a href="#">Jackets</a></li>
+                                <li><a href="#">T-shirts</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>-->
+                <li ng-repeat="category in $root.CATEGORIES"><a href="{{ '#/catalog/' + category.id }}">{{ category.name }}</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- <div class="authors_menu">
+        <div class="authors_title">
+            <h2 class="categori_toggle">ALL AUTHORS</h2>
+        </div>
+        <div class="authors_menu_toggle">
+            <ul>
+                <li ng-repeat="author in $root.AuthorName"><a href="{{ '#/catalog/' + author.id }}"> {{
+                    author.name }}</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="publishers_menu">
+        <div class="publishers_title">
+            <h2 class="publishers_toggle">ALL PUBLISHEERS</h2>
+        </div>
+        <div class="publishers_menu_toggle">
+            <ul>
+                <li ng-repeat="publisher in $root.PublishersName"><a href="{{ '#/catalog/' + publisher.id }}"> {{ publisher.name }}</a></li>
+            </ul>
+        </div>
+    </div>-->
+</section> 

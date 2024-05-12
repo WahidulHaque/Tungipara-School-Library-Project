@@ -1,0 +1,77 @@
+<section class="login-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <category></category>
+
+                <customer-sidebar></customer-sidebar>
+
+            </div>
+            <div class="col-md-9">
+                <div class="dashboard-right">
+                    <div class="dashboard theme-card">
+                        <div class="page-title">
+                            <h2>My Profile</h2>
+                        </div>
+
+                        <div class="box-account box-info">
+                            <form class="theme-form" name="profileForm">
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Enter your full name" required>
+
+                                            <div class="text-danger" ng-show="profileForm.$submitted || profileForm.name.$touched || $root.ERRORS.Name.length > 0">
+                                                <div ng-show="profileForm.name.$error.required">Please enter your full name.</div>
+                                                <div ng-repeat="error in $root.ERRORS.Name">{{ error }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="phone" name="phone" ng-model="formData.mobileNo" placeholder="Enter your mobile no" required>
+
+                                            <div class="text-danger" ng-show="profileForm.$submitted || profileForm.phone.$touched || $root.ERRORS.MobileNo.length > 0">
+                                                <div ng-show="profileForm.phone.$error.required">Please enter your mobile no.</div>
+                                                <div ng-repeat="error in $root.ERRORS.MobileNo">{{ error }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" placeholder="Enter your email">
+
+                                            <div class="text-danger" ng-show="profileForm.$submitted || profileForm.email.$touched || $root.ERRORS.email.length > 0">
+                                                <div ng-show="profileForm.email.$error.required">Please enter valid email address.</div>
+                                                <div ng-repeat="error in $root.ERRORS.email">{{ error }}</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <textarea class="form-control" id="address" name="address" ng-model="formData.addressInfo" placeholder="Enter your address"></textarea>
+
+                                            <div class="text-danger" ng-show="profileForm.$submitted || profileForm.addressInfo.$touched || $root.ERRORS.addressInfo.length > 0">
+                                                <div ng-show="profileForm.addressInfo.$error.required">Please enter your address.</div>
+                                                <div ng-repeat="error in $root.ERRORS.addressInfo">{{ error }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-solid" ng-click="update()">Update</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

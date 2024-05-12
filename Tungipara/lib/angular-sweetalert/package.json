@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      "angular-sweetalert@1.1.2",
+      "D:\\Shiblee\\Development\\ZamZamIT\\SisterCon\\EcommSite"
+    ]
+  ],
+  "_from": "angular-sweetalert@1.1.2",
+  "_id": "angular-sweetalert@1.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-tQkMTh+khtm2G56nmdW3B7sEQi8=",
+  "_location": "/angular-sweetalert",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "angular-sweetalert@1.1.2",
+    "name": "angular-sweetalert",
+    "escapedName": "angular-sweetalert",
+    "rawSpec": "1.1.2",
+    "saveSpec": null,
+    "fetchSpec": "1.1.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-sweetalert/-/angular-sweetalert-1.1.2.tgz",
+  "_spec": "1.1.2",
+  "_where": "D:\\Shiblee\\Development\\ZamZamIT\\SisterCon\\EcommSite",
+  "author": {
+    "name": "pedro@oitozero.com"
+  },
+  "bugs": {
+    "url": "https://github.com/oitozero/ngSweetAlert/issues"
+  },
+  "contributors": [
+    {
+      "name": "gnick666@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "angular": "^1.3.14",
+    "sweetalert": "^0.4.2"
+  },
+  "description": "AngularJS wrapper for SweetAlert",
+  "homepage": "https://github.com/oitozero/ngSweetAlert#readme",
+  "keywords": [
+    "angular",
+    "AngularJs",
+    "sweetalert",
+    "sweet",
+    "alert"
+  ],
+  "license": "MIT",
+  "main": "SweetAlert.js",
+  "name": "angular-sweetalert",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oitozero/ngSweetAlert.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.2"
+}

@@ -1,0 +1,76 @@
+<section class="slider_section slider_s_two section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <category></category>
+
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex mb-3">
+                    <h4><a href="#" tabindex="0"> <i class="fa fa-home mr-1"></i></a></h4>
+                    <h4><a class="font-weight-bold" href="#" tabindex="0">Home</a> / CART </h4>
+                </div>
+                <!--<div class="top-banner-wrapper pb-5">
+                    <a href="#">
+                        <img ng-src="assets/frontend/images/about/about_us.jpg" class="img-fluid"alt="">
+                    </a>
+                </div>-->
+                <div style="overflow-x: auto;">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr class="text-center">
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="text-center text-muted" ng-repeat="product in $root.CART_PRODUCTS">
+                            <td>
+                                <img ng-src="{{ product.virtualPath }}" class="img-fluid bg-img" alt="" style="max-width: 80px">
+                            </td>
+                            <td>
+                                <a href="#">{{ product.titleAttribute }}</a>
+                            </td>
+                         
+                            <td>
+                                <div class="qty-box">
+                                    <div class="input-group">
+                                         
+
+                                        <input type="number" name="quantity" ng-model="product.quantity" class="quantity-btn input-number text-center" min="1" max="1">
+
+                                       
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a ng-click="removeCartProduct(product)">
+                                    <h4><i class="fa fa-times"></i></h4>
+                                </a>
+                            </td>
+                            <td>
+                                <span class="cart_price">{{ $root.PRODUCT_QTY }}</span>
+                            </td>
+                           <!-- <td>
+                                <h5 class="font-weight-bold">{{ product.mrp * product.quantity | currency : 'BDT ' : 2 }}</h5>
+                            </td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+               <!-- <h4 class="text-right font-weight-bold py-3">
+                    Total Price : {{ $root.PRODUCT_TOTAL | currency : 'BDT ' : 2  }}
+                </h4>-->
+                <div class="row cart-buttons pb-5">
+                    <div class="col-6"><a href="#/" class="btn btn-solid">Continue</a></div>
+                    <div class="col-6 text-right"><a href="#/checkout/checkout" class="btn btn-solid">check out</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

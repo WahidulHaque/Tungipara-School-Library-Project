@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\assets",
+    "\\src",
+    "\\src\\catalog",
+    "\\src\\components",
+    "\\src\\components\\ecomFooter",
+    "\\src\\components\\ecomHeader",
+    "\\src\\customer",
+    "\\src\\customer\\changePassword",
+    "\\src\\services"
+  ],
+  "SelectedNode": "\\src\\components\\ecomFooter\\ecomFooter.html",
+  "PreviewInSolutionExplorer": false
+}

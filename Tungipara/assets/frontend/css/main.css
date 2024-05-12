@@ -1,0 +1,89 @@
+
+/* custom header section starts */
+
+.custom-header {
+	padding-top: 0;
+}
+.custom-header section {
+	padding-top: 0
+}
+
+.custom-header .menu_item_children {
+	width: 100%
+}
+
+
+.categories_menu_toggle > ul > li , .authors_menu_toggle > ul > li , .publishers_menu_toggle > ul > li {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorie_sub_menu > li {
+	width: 100%
+}
+/*custom header section ends*/
+
+
+.section-a-space{
+	padding-top: 0;
+}
+
+.section-a-space .category-section{
+	padding-bottom: 20px;
+}
+/*Start Category Section style*/
+.category-section > div {
+	padding: 5px 5px;
+}
+
+/*End Category Section style*/
+
+.hover_category{
+	background: rgb(253,120,19);
+    color: white;
+}
+.search_box{
+	border: 2px solid rgb(253,120,19);
+}
+
+/*All Category style*/
+.nice-select .option{
+	display: block;
+	z-index: 5;
+}
+/*All Category style*/
+
+/*Subscribe btn design*/
+ .btn-solid{
+ 	height: 35px;
+    background: rgb(256,126,18);
+    border-radius: 20px;
+    font-size: 14px;
+ }
+ /*Subscribe btn design*/
+
+ /*Bazar-drop logo style start*/
+/*.logo-design img{*/
+/*    height: 120px;*/
+/*    text: center;*/
+/*}*/
+ /*Quantity btn style start*/
+.quantity-btn{
+    width: 50px;
+}
+ /*Quantity btn style end*/
+
+
+
+
+
+
+
+
+
+
+
+
+

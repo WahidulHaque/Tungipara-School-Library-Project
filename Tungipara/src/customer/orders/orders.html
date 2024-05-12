@@ -1,0 +1,51 @@
+<section class="section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <category></category>
+
+                <customer-sidebar></customer-sidebar>
+
+            </div>
+            <div class="col-md-9">
+                <div class="dashboard-right">
+                    <div class="dashboard">
+                        <div class="page-title">
+                            <h2>Dashboard</h2>
+
+                            <table class="table table-hover table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">#</th>
+                                        <th class="text-center">OrderNo</th>
+                                        <th class="text-center">UserName</th>
+                                        <th class="text-center">MobileNo</th>
+                                        <th class="text-center">Book Date</th>
+                                        <th class="text-center">DueDate</th>
+                                        <th class="text-center">Received Date</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="order in orders">
+                                        <td class="text-center">{{ $index + 1 }}</td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.orderNo }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.userName }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.mobileNo }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.transactionDate }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.dueDate }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.returnDate }}</a></td>
+                                        <td class="text-center"><a href="#/customer/invoice/{{ order.id }}">{{ order.status }}</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

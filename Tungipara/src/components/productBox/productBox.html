@@ -1,0 +1,24 @@
+﻿<div class="product-box product-select-box">
+    <div class="img-block">
+        <a href="#">
+            <img ng-src="{{ $ctrl.product.virtualPath }}" class="img-fluid bg-img" alt="" style="max-height:100px; display:block; margin: auto;">
+        </a>
+    </div>
+    <div class="product-info">
+        <a href="#">
+            <h6>{{ $ctrl.product.titleAttribute }}</h6>
+            <h6>লেখক: {{ $ctrl.product.authorName }}</h6>
+            <h6>প্রকাশক: {{ $ctrl.product.publisherName }}</h6>
+        </a>
+        <h5>{{ $ctrl.product.mrp | currency : 'BDT ' : 2 }}</h5>
+    </div>
+    <div class="qty-add-box">
+        <div class="qty-box">
+            <!--<label>Qty:</label>-->
+            <div class="input-group hidden">
+                <input type="number" name="quantity" class="form-control input-number" ng-model="quantity">
+            </div>
+            <button title="buy now" ng-click="addToCart()" style="display:block; margin: auto; width:80%;">Add<i class="ti-shopping-cart"></i></button>
+        </div>
+    </div>
+</div>

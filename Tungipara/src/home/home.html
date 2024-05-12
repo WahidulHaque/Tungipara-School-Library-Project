@@ -1,0 +1,189 @@
+<section class="slider_section slider_s_two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <category></category>
+            </div>
+            <div class="col-md-9">
+                <div class="swiper-container gallery-top">
+                    <div class="slider_area swiper-wrapper">
+                        <div class="single_slider swiper-slide d-flex align-items-center"
+                             data-bgimg="assets/frontend/images/slider/category_hp_3.jpg">
+                            <div class="slider_content">
+                                <!--<h3>new collection</h3>
+                                <h1>new collection <br> sport clothes for mens</h1>
+                                <p>discount <span> -30% off</span> this week</p>
+                                <a class="button" href="shop.html">DISCOVER NOW</a>-->
+                            </div>
+                        </div>
+                        <div class="single_slider swiper-slide d-flex align-items-center"
+                             data-bgimg="assets/frontend/images/slider/category_hp_2.jpg">
+                            <div class="slider_content">
+                                <!--<h3>big sale products</h3>
+                                <h1>clear & modern <br> minimalist chair 2019</h1>
+                                <p>discount <span> -50% off</span> this week</p>
+                                <a class="button" href="shop.html">DISCOVER NOW</a>-->
+                            </div>
+                        </div>
+                        <div class="single_slider swiper-slide d-flex align-items-center"
+                             data-bgimg="assets/frontend/images/slider/category_hp_1.jpg">
+                            <div class="slider_content color_white">
+                                <!--<h3>new arrivals</h3>
+                                <h1>new arrivals <br> cellphone mobile apps</h1>
+                                <p>discount <span> -10% off</span> this week</p>
+                                <a class="button" href="shop.html">DISCOVER NOW</a>-->
+                            </div>
+                        </div>
+                        <!--<div class="single_slider swiper-slide d-flex align-items-center"
+                             data-bgimg="assets/frontend/images/slider/slider8.jpg">
+                            <div class="slider_content">
+                                <h3>big sale products</h3>
+                                <h1>wooden <br> minimalist chair 2019</h1>
+                                <p>discount <span> -60% off</span> this week</p>
+                                <a class="button" href="shop.html">DISCOVER NOW</a>
+                            </div>
+                        </div>-->
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- collection banner start -->
+<section class="ratio2_1 section-a-space mt-lg-5">
+    <div class="container">
+        <div class="row partition-3 category-section">
+            <div class="col-md-2" ng-repeat="category in $root.CATEGORIES">
+                <a href="{{ '#/catalog/' + category.id }}">
+                    <div class="collection-banner border-0 p-center text-center">
+                        <div class="img-part">
+                            <img ng-src="{{ category.virtualPath }}" class=" img-fluid  bg-img" alt="">
+                        </div>
+                        <div class="contain-banner">
+                            <div>
+                                <h3>{{ category.name }}({{ category.bookCount }})</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- collection banner end -->
+
+<!-- tab section start -->
+<!--<section class=" tab-layout1 pb-4">
+    <div class="theme-tab">
+        <div class="tab-content-cls ratio_square">
+            <div id="tab-1" class="tab-content active default" style="display: block">
+                <div class="container shadow-cls">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="product_header">
+                                <div class="section_title">
+                                    <h2>Category</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border-row1 ml-10">
+                        <div class="col-md-2 p-0"  ng-repeat="product in products">
+
+                            <product-box product="product"></product-box>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+<!-- tab section start -->
+<!-- section start -->
+<!--<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 logo no-border">
+                <h2 class="title">trusted brand</h2>
+                <div class="logo-3 border-logo">
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/1.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/2.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/3.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/4.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/5.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/6.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/7.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/8.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/2.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/3.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/2.png" class=" img-fluid" alt="">
+                        </div>
+                        <div class="logo-img">
+                            <img ng-src="assets/frontend/images/logo/3.png" class=" img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 offset-xl-3">
+                <div class="app-section">
+                    <div class="img-block">
+                        <img ng-src="assets/frontend/images/app/3.jpg" class=" img-fluid" alt="" style="max-width: 150px">
+                    </div>
+                    <div class="app-content">
+                        <div>
+                            <h5>download the big market app</h5>
+                            <div class="app-buttons">
+                                <a href="https://play.google.com/store/apps/details?id=com.zamzamit.cloudshp" target="_blank">
+                                    <img ng-src="assets/frontend/images/app/app-storw.png" class=" img-fluid" alt="">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.zamzamit.cloudshp" target="_blank">
+                                    <img ng-src="assets/frontend/images/app/play-store.png" class=" img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+<!-- section end -->

@@ -1,0 +1,89 @@
+<!--section start-->
+<section class="login-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <category></category>
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex mb-2">
+                    <a href="#" tabindex="0"> <i class="fa fa-home mr-1"></i> </a>
+                    <a class="font-weight-bold" href="#" tabindex="0">Home</a> / Customer Registration
+                </div>
+               <!-- <div class="top-banner-wrapper pb-2">
+                    <a href="#">
+                        <img src="assets/frontend/images/about/about-us.jpg" class="img-fluid"alt="">
+                    </a>
+                </div>-->
+                <h3 class="title pb-3">create account</h3>
+                <div class="theme-card">
+                    <form class="theme-form" name="registerForm">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" ng-model="formData.name" placeholder="Enter your full name" required>
+
+                                    <div class="text-danger" ng-show="registerForm.$submitted || registerForm.name.$touched || $root.ERRORS.Name.length > 0">
+                                        <div ng-show="registerForm.name.$error.required">Please enter your full name.</div>
+                                        <div ng-repeat="error in $root.ERRORS.Name">{{ error }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="phone" name="phone" ng-model="formData.mobileNo" placeholder="Enter your mobile no" required>
+
+                                    <div class="text-danger" ng-show="registerForm.$submitted || registerForm.phone.$touched || $root.ERRORS.MobileNo.length > 0">
+                                        <div ng-show="registerForm.phone.$error.required">Please enter your mobile no.</div>
+                                        <div ng-repeat="error in $root.ERRORS.MobileNo">{{ error }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" placeholder="Enter your email">
+
+                                    <div class="text-danger" ng-show="registerForm.$submitted || registerForm.email.$touched || $root.ERRORS.email.length > 0">
+                                        <div ng-show="registerForm.email.$error.required">Please enter valid email address.</div>
+                                        <div ng-repeat="error in $root.ERRORS.email">{{ error }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="password">Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="password" name="password" ng-model="formData.Password" placeholder="Enter your password" required minlength="6">
+
+                                    <div class="text-danger" ng-show="registerForm.$submitted || registerForm.password.$touched || $root.ERRORS.Password.length > 0">
+                                        <div ng-show="registerForm.password.$error.required">Please enter your password.</div>
+                                        <div ng-show="registerForm.password.$error.minlength">Password must be at least six character.</div>
+                                        <div ng-repeat="error in $root.ERRORS.Password">{{ error }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="confirm_password">Confirm Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" ng-model="formData.confirmPassword" placeholder="Confirm your password" required compare-to="formData.Password">
+
+                                    <div class="text-danger" ng-show="registerForm.$submitted || registerForm.confirm_password.$touched">
+                                        <span ng-show="registerForm.confirm_password.$error.required">Please confirm your password.</span>
+                                        <span ng-show="registerForm.confirm_password.$error.compareTo">Confirm password did no match.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-solid" ng-click="register()">create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Section ends-->

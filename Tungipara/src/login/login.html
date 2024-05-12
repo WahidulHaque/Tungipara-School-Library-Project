@@ -1,0 +1,88 @@
+<!--section start-->
+<section class="login-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <category></category>
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex mb-2">
+                    <a href="#" tabindex="0"> <i class="fa fa-home mr-1"></i> &nbsp;</a>
+                    <a class="font-weight-bold" href="#" tabindex="0">Home</a> / Login
+                </div>
+                <!--<div class="top-banner-wrapper">
+                    <a href="#">
+                        <img ng-src="assets/frontend/images/about/about-us.jpg" class="img-fluid"alt="">
+                    </a>
+                </div>-->
+
+                <div class="col-md-6 float-left">
+                    <h3 class="title">Login</h3>
+                    <div class="theme-card">
+                        <form class="theme-form" name="loginFrom" novalidate>
+
+                            <div class="form-groups mb-3">
+                                <div class="forms">
+                                    <label for="School">School <span class="text-danger">*</span></label>
+                                </div>
+
+                                <div class="school_search">
+                                    <select class="select_school_option w-100 mb-3" name="school" id="school" ng-model="search.schoolid" ng-change="schoolSelected()">
+                                        <option selected value="">School Names</option>
+                                        <option value="{{ school.id }}" ng-repeat="school in $root.SchoolList">{{ school.name }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-groups mb-3">
+                               <div class="forms">
+                                <label for="MobileNo">Mobile <span class="text-danger">*</span></label>
+                               </div>
+
+                                <!-- <div class="forms">-->
+                                <input ng-model="formData.MobileNo" name="MobileNo" id="MobileNo" type="text" class="form-control" placeholder="Enter your mobile no" required>
+                                <div class="text-danger" ng-show="loginFrom.$submitted || loginFrom.MobileNo.$touched">
+                                    <span ng-show="loginFrom.MobileNo.$error.required">Please enter your mobile no.</span>
+                                    <span ng-show="loginFrom.MobileNo.$error.invalid">Invalid credentials.</span>
+                                </div>
+                                <!-- </div>-->
+                               
+                            </div>
+
+
+                            <div class="form-groups">
+                                <label for="Password">Password <span class="text-danger">*</span></label>
+
+
+                                <!--<div class="forms">-->
+                                <input ng-model="formData.Password" name="Password" id="Password" type="password" class="form-control" placeholder="Enter your password" required>
+                                <div class="text-danger" ng-show="loginFrom.$submitted || loginFrom.Password.$touched">
+                                    <span ng-show="loginFrom.Password.$error.required">Please enter your password.</span>
+                                </div>
+                                <!--</div>-->
+                            </div>
+                                <button class="btn btn-solid" ng-click="login()">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 right-login float-right">
+                    <h3 class="title">New Customer</h3>
+                    <div class="theme-card authentication-right">
+                        <h6 class="title-font">Create A Account</h6>
+                        <p>
+                            Sign up for a free account at our store. Registration is quick and easy. It allows you to be
+                            able to order from our shop. To start shopping click register.
+                        </p><a href="#/registration"
+                               class="btn btn-solid">
+                            Create
+                            an Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Section ends-->

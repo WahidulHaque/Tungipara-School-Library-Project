@@ -1,0 +1,224 @@
+<section class="section-b-space">
+    <div class="container">
+        <div class="checkout-page">
+            <div class="checkout-form">
+
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <category></category>
+                    </div>
+                    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                        <form class="theme-form" name="checkoutFrom" novalidate>
+                            <div class="d-flex mb-2">
+                                <h4> <a href="#" tabindex="0"> <i class="fa fa-home mr-1"></i> </a></h4>
+                                <h4> <a class="font-weight-bold" href="#" tabindex="0">Home</a> / CHECKOUT </h4>
+                            </div>
+                           <!-- <div class="top-banner-wrapper pb-3">
+                                <a href="#">
+                                    <img ng-src="assets/frontend/images/about/about-us.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>-->
+
+
+                            <div class="col-md-6 col-sm-12 col-xs-12 float-left">
+                                <!--left side box-->
+                                <div class="checkout-details">
+                                    <h3>Member Select</h3>
+
+
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 float-left">
+                                           <!-- <div class="form-group col-md-12 col-sm-6 col-xs-12">-->
+                                            <div class="field-label">Class</div>
+                                            <input type="text" name="class" id="class" ng-model="formData.class" ng-change="searchMember()" placeholder="Please enter Class" required>
+
+                                            <div class="text-danger" ng-show="checkoutFrom.$submitted || checkoutFrom.class.$touched">
+                                                <span ng-show="checkoutFrom.class.$error.required">Please enter your class.</span>
+                                            </div>
+                                        </div>
+
+
+                                       <!--</div>-->
+                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 float-right">
+                                          <!--  <div class="form-group col-md-12 col-sm-6 col-xs-12">-->
+                                            <div class="field-label">Rolls</div>
+                                            <input type="text" name="roll" ng-model="formData.roll" ng-change="searchMember()"  placeholder="Please enter Roll" required>
+
+                                            <div class="text-danger" ng-show="checkoutFrom.$submitted || checkoutFrom.roll.$touched">
+                                                <span ng-show="checkoutFrom.roll.$error.required">Please enter your roll </span>
+                                            </div>
+                                        </div>
+
+
+                                      <!--  </div>-->
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <div class="field-label">Search Member (Mobile no.)</div>
+                                            <input type="text" name="memberInfo" ng-model="formData.memberInfo" ng-change="searchMember()" placeholder="Please enter your member info" required>
+
+                                            <div class="text-danger" ng-show="checkoutFrom.$submitted || checkoutFrom.memberInfo.$touched">
+                                                <span ng-show="checkoutFrom.memberInfo.$error.required">Please enter your mobile number.</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <div class="text-center">
+                                                <button class="btn-solid btn" ng-click="placeOrder()">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           <!-- </div>-->
+
+                           <!-- <div class="col-md-5 col-sm-12 col-xs-12 float-left">-->
+                                <div class="checkout-details">
+                                    <h3>Member Info.</h3>
+
+
+                                    <div class="row">
+                                        <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                            <div class="field-label">Student Name</div>
+                                            <input type="text" name="studentName" id="class" ng-model="formData.studentName" required>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                            <div class="field-label">Class</div>
+                                            <input type="text" name="className" id="className" ng-model="formData.className" required>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                            <div class="field-label">Roll</div>
+                                            <input type="text" name="studentRoll" id="studentRoll" ng-model="formData.studentRoll" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                                    <div class="col-md-6 col-sm-12 col-xs-12 float-right"> <!-- right side box-->
+                                        <div class="checkout-details">
+                                            <div class="order-box">
+                                                <div class="title-box">
+                                                    <div>Book Names </div>
+                                                </div>
+                                                <ul class="qty">
+                                                    <li ng-repeat="product in $root.CART_PRODUCTS">{{ product.titleAttribute }} <!--× {{ product.quantity }}--></li>
+                                                </ul>
+                                                <ul class="sub-total">
+                                                    <li>Subtotal: <span class="count">{{ $root.PRODUCT_QTY  }}</span></li>
+                                                </ul>
+                                                <!--<ul class="total">
+                                                   <li>Total <span class="count">{{ $root.PRODUCT_TOTAL | currency : 'BDT ' : 2  }}</span></li>
+                                                </ul>-->
+                                            </div>
+
+                                  <!--
+                                    <div class="payment-box">
+                                        <div class="upper-box">
+                                            <div class="payment-options">
+                                                <ul>
+                                                    <li>
+                                                        <div class="radio-option">
+                                                            <input type="radio" name="paymentMethod" id="payment-1" checked="checked">
+                                                            <label for="payment-1">Check Payments<span class="small-text">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="radio-option">
+                                                            <input type="radio" name="paymentMethod" id="payment-2">
+                                                            <label for="payment-2">Cash On Delivery<span class="small-text">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span></label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                     </div>  
+                                  -->       
+                                            <!-- <input type="checkbox" id="oneWeek" name="oneWeek" value="days">
+                                                      <label for="oneWeek"> 7 Days </label><br>
+
+
+
+
+                                                      <input type="checkbox" id="twoWeek" name="twoWeek" value="days">
+                                                      <label for="twoWeek"> 14 Days </label><br>
+
+
+
+
+                                                      <input type="checkbox" id="threeWeek" name="threeWeek" value="days">
+                                                      <label for="threeWeek"> 21 Days </label><br>
+
+
+
+
+                                                      <input type="checkbox" id="fourWeek" name="fourWeek" value="days">
+                                                      <label for="fourWeek"> 28 Days </label> <br />  
+                                            --> 
+                                           <div class="col-md-6 col-sm-12 col-xs-12 float-left justify-content-center d-flex">
+                                                <input type="radio" id="html" name="fav_language" value="HTML" style="height: 28px;">
+                                                <label style="margin-left: 5px;" for="oneWeek">7 Days</label><br>
+                                           </div>
+
+                                             <div class="col-md-6 col-sm-12 col-xs-12 float-right justify-content-center d-flex">
+                                                <input type="radio" id="css" name="fav_language" value="CSS" style="height: 28px;">
+                                                <label style="margin-left: 5px;" for="twoWeek">14 Days</label><br>
+                                             </div>
+
+                                            <div class="col-md-6 col-sm-12 col-xs-12 float-left justify-content-center d-flex">
+                                                <input type="radio" id="node" name="fav_language" value="Node" style="height: 28px;">
+                                                <label  style="margin-left: 5px;" for="threeWeek">21 Days</label>
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 col-xs-12 justify-content-center d-flex">
+                                                <input type="radio" id="react" name="fav_language" value="React" style="height: 28px;">
+                                                <label style="margin-left: 5px;" for="fourWeek">28 Days</label>
+                                            </div>
+
+                                            <div class="payment-box">
+                                                <div class="text-center">
+                                                    <button class="btn-solid btn mt-3" ng-click="placeOrder()">Assign Books</button>
+
+                                                  <!--  <input type="text" name="memberInfo" ng-model="orderData.saveOrderInfo" ng-change="saveOrderInfo()" required>-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                            <div class="field-label">Roll</div>
+                                            <input type="text" name="roll" ng-model="formData.roll" placeholder="Please enter Roll." required>
+
+                                            <div class="text-danger" ng-show="checkoutFrom.$submitted || checkoutFrom.roll.$touched">
+                                                <span ng-show="checkoutFrom.roll.$error.required">Please enter your roll no.</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <div class="field-label">Search Member</div>
+                                            <input type="text" name="memberInfo" ng-model="formData.memberInfo" ng-change="searchMember()" placeholder="Please enter your member info" required>
+
+                                            <div class="text-danger" ng-show="checkoutFrom.$submitted || checkoutFrom.memberInfo.$touched">
+                                                <span ng-show="checkoutFrom.memberInfo.$error.required">Please enter your member type.</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn-solid btn" ng-click="placeOrder()">Search</button>
+                                    </div>-->
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,72 @@
+<section class="section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <category></category>
+
+                <customer-sidebar></customer-sidebar>
+
+            </div>
+            <div class="col-md-9">
+                <div class="dashboard-right">
+                    <div class="dashboard">
+                        <div class="page-title">
+                            <h2>Invoice # {{ order.orderNo }}</h2>
+
+                             <div class="row">
+                                <div class="col-md-6">
+                                    <a href="/"><img ng-src="assets/frontend/images/logo/logo_.jpg" alt="" style="max-height: 100px"></a>
+                                    <h4 class="mb-0">Tungipara, Gopalganj, Bangladesh.</h4>
+                                    <h4 class="mb-5">Mobile : 01914404014</h4>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <h4 class="mt-5">User Name :{{ order.userName }}</h4>
+                                    <h4 class="mb-0">Order # :{{ order.orderNo }}</h4>
+                                    <p class="mb-0">Mobile No :{{ order.mobileNo }}</p>
+                                    <p class="mb-0">Book Date :{{ order.transactionDate }}</p>
+                                    <p class="mb-0">Due Date :{{ order.dueDate }}</p>
+                                    <p class="mb-0">Received Date: {{order.returnDate }}</p> 
+                                    <h4 class="mb-0">Order Status :{{ order.status }}</h4>
+                                </div>
+                             </div>
+                            <table class="table table-hover table-striped table-sm">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">Serial No.</th>
+                                    <th class="text-center" colspan="2">Image</th>
+                                    <th class="text-center">Book Name</th>                                    
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="product in order.transactionDetailsList">
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td class="text-center" colspan="2">   
+                                        <img ng-src="{{ product.virtualPath }}" class="img-fluid" alt="" style="max-width: 80px">
+                                    </td>
+                                    <td class="text-center">{{ product.bookName }}</td>
+                                   
+                                </tr>
+                                </tbody>
+                               <!-- <tfoot>
+                                <tr>
+                                    <th class="text-right" colspan="5">Total</th>
+                                    <th class="text-center">{{ order.totalAmount | currency : 'BDT ' : 2 }}</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" colspan="5">Shipping Charge</th>
+                                    <th class="text-center">{{ order.serviceCharges | currency : 'BDT ' : 2 }}</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" colspan="5">Sub Total</th>
+                                    <th class="text-center">{{ order.totalAmount | currency : 'BDT ' : 2 }}</th>
+                                </tr>
+                                </tfoot>-->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
